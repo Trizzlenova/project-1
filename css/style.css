@@ -24,6 +24,7 @@ body {
 
 /* NAVIGATION BAR */
 
+
 #sticky {
   width: 100%;
   background-color: white;
@@ -45,7 +46,7 @@ a {
 nav ul li {
   display: inline-block;
   text-align: center;
-  padding: .5em 5em;
+  padding: .5em 5em 0 0;
 }
 
 ul {
@@ -63,23 +64,35 @@ header {
   position: relative;
   text-align: center;
   color: white;
-  margin: 2em auto;
+  margin: 0 auto;
   width: 90%;
+}
+
+header h1, header h2 {
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
+  margin: 3em auto;
 }
 
 h1 {
   letter-spacing: 0.5em;
-  font-size: 3.5em;
-  margin: .5em;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  margin: 1em auto;
 }
 
 header h2 {
+  font-size: 1.5em;
   position: absolute;
-  /*color: white;*/
+  color: white;
+  font-weight: 400;
+}
+/* HAMBURGER */
+
+header i {
+  display: none;
+  position: absolute;
+  top: -.5em
 }
 
 /* MAIN SECTION */
@@ -87,8 +100,6 @@ header h2 {
 main {
   margin: 3em auto;
   width: 80%;
-  : flex;
-  flex-direction: column;
 }
 
 h2, h3, h4, footer a {
@@ -100,6 +111,11 @@ h3, h4 {
   text-align: center;
 }
 
+h4 {
+  padding-bottom: 1.2em;
+}
+
+
 section {
   display: flex;
   flex-direction: row;
@@ -107,10 +123,14 @@ section {
   text-align: center;
 }
 
+article h4 {
+  font-size: .8em;
+}
+
 .one, .two, .three {
-  width: 33%;
+  width: 50%;
   margin: 0 auto;
-  padding: 1em;
+  padding: .5em;
 }
 
 .one {
@@ -127,12 +147,12 @@ section {
 
 img {
   max-width: 100%;
-  padding-bottom: .5em;
+  padding-bottom: 0, .5em;
 }
 
 article button {
   padding: .5em;
-  width: 33%
+  width: 40%
 }
 
 /* ASIDE */
@@ -144,21 +164,23 @@ aside {
   background-color:rgb(206, 243, 246);
   padding: 4em 0;
   width: 90%;
-  margin: 0 auto;
+  margin: 6em auto;
 }
 
 aside p {
   width: 70%;
   margin: 0 auto;
+  color: rgb(69, 84, 94);
 }
 
 /* GALLERY */
 
 #gallery {
   margin: 0 auto;
-  width: 85%;
+  width: 80%;
   display: flex;
   flex-direction: row;
+  padding-bottom: 3em;
 }
 
 .pictures-col-1, .pictures-col-2, .pictures-col-3 {
@@ -186,8 +208,8 @@ aside p {
 }
 
 .box {
-  width: 85%;
-  padding-bottom: 5em;
+  width: 80%;
+  padding-bottom: 4em;
 }
 
 .comment {
@@ -199,6 +221,7 @@ aside p {
 
 .comment h2 {
   text-align: center;
+  padding-bottom: 2em;
 }
 
 #first, #second, textarea {
@@ -214,7 +237,6 @@ aside p {
   float: right;
   width: 48%;
 }
-
 
 textarea {
   margin: 0 auto 1.2em;
@@ -282,6 +304,10 @@ i {
   padding-top: 1em;
 }
 
+.text {
+  border: none;
+}
+
 
 footer input {
   text-align: center;
@@ -293,3 +319,79 @@ span {
   padding-top: 2em;
   font-family: "Lato", sans-serif;
 }
+
+/* 856px breakpoint */
+
+@media screen and (max-width: 856px){
+
+  section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  }
+
+  .one, .two, .three {
+  width: 70%;
+  display: block;
+  padding: 1em;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  article {
+    margin: auto;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+/* 564px breakpoint */
+
+@media screen and (max-width: 564px){
+  p {
+    font-size: 1em;
+  }
+
+  header {
+    width: 100%;
+    display: relative;
+  }
+
+  header i {
+    padding-left: .75em;
+    font-size: 1.25em;
+    float: left;
+
+  }
+
+  #sticky {
+    display: none;
+  }
+
+  article h4 {
+    font-size: .7em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .contact button {
+    width: 100;
+  }
+}
+
