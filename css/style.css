@@ -87,6 +87,7 @@ header h2 {
   color: white;
   font-weight: 400;
 }
+
 /* HAMBURGER */
 
 header i {
@@ -152,7 +153,8 @@ img {
 
 article button {
   padding: .5em;
-  width: 40%
+  width: 40%;
+  background-color: white;
 }
 
 /* ASIDE */
@@ -174,6 +176,17 @@ aside p {
 }
 
 /* GALLERY */
+
+.one img, .two img, .three img, #gallery img {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 1.0;
+}
+
+.one img:hover, .two img:hover, .three img:hover, #gallery img:hover {
+  opacity: .5;
+}
 
 #gallery {
   margin: 0 auto;
@@ -367,11 +380,22 @@ span {
     display: relative;
   }
 
+  header img {
+    height: cover;
+    width: cover;
+  }
+
   header i {
     padding-left: .75em;
-    font-size: 1.25em;
+    font-size: 2em;
     float: left;
 
+  }
+
+   .one, .two, .three {
+  width: 100%;
+  display: block;
+  padding: 1em;
   }
 
   #sticky {
@@ -392,6 +416,30 @@ span {
 
   .contact button {
     width: 100;
+  }
+
+  #gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pictures-col-1, .pictures-col-2, .pictures-col-3 {
+  padding: .2em;
+  width: 100%;
+  margin: 0 auto;
+  float: center;
+  }
+
+  .pictures-col-1 {
+    /*float: left;*/
+  }
+
+  .pictures-col-2 {
+    float: center;
+  }
+
+  .pictures-col-3 {
+    /*float: right;*/
   }
 }
 
