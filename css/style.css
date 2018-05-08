@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  /*border: 1px solid purple;*/
+  border: 1px solid purple;
 }
 
 .clearfix:after {
@@ -367,9 +367,9 @@ span {
   }
 }
 
-/* 617px breakpoint */
+/* 634px breakpoint */
 
-@media screen and (max-width: 617px){
+@media screen and (max-width: 634px){
   p {
     font-size: 1em;
   }
@@ -391,7 +391,7 @@ span {
 
   }
 
-   .one, .two, .three {
+  .one, .two, .three {
   width: 100%;
   display: block;
   padding: 1em;
@@ -410,16 +410,35 @@ span {
   }
 
   h2 {
-    font-size: .7em;
+    font-size: 1.5em;
+  }
+  header h2 {
+    font-size: 1em;
+  }
+
+  .comment h2{
+    padding-bottom: .5em;
+  }
+
+  .comment {
+    padding-bottom: 4em;
   }
 
   #first, #second {
     width: 100%;
+    padding: 0;
+    margin: .6em 0;
+  }
+
+  #second {
+    margin-bottom: 1em;
   }
 
   .contact button, .contact input {
     width: 50%;
     font-size: .2em;
+    margin: 0 auto;
+    padding: 0;
   }
 
   #gallery {
@@ -449,4 +468,6 @@ span {
     padding: .2em;
 
 }
+
+
 
